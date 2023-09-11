@@ -1,13 +1,14 @@
 import { home } from "@/assets/data/dummydata";
-
+import Banner from "@/components/Banner";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-
+import Coins from "@/components/Coins";
+import Expertise from "@/components/Expertise";
+import ShowCase from "@/components/ShowCase";
+import Testimonial from "@/components/Testimonial";
 import { Title, TitleLogo, TitleSm } from "@/components/common/Title";
-
+import { BlogCard, Brand } from "@/components/router";
 import React, { useRef } from "react";
-import App from "next/app";
-import Table from "@/utils/App";
 
 const Hero = () => {
   const [inView, ref] = useInView({ triggerOnce: true });
@@ -61,6 +62,16 @@ const Hero = () => {
               cryptocurrencies, you need a cryptocurrency wallet.
             </p>
           </div>
+          {/* <Coins />
+          <div className="hero-content grid-4">
+            {home.map((item, i) => (
+              <div className="box" key={i}>
+                <span className="green">{item.icon}</span> <br />
+                <br />
+                <h3>{item.title}</h3>
+              </div>
+            ))} */}
+          {/* </div> */}
         </div>
       </section>
     </>
